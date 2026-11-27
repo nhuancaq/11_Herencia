@@ -62,3 +62,30 @@ class automovil: public vehiculo{
             }
         }
 };
+
+class Camion : public vehiculo{
+    private:
+        double carga;
+    public:
+        Camion(string placa, string col, string mar, double vel, double cargaInicial)
+        : vehiculo(placa, col, mar, vel), carga(cargaInicial){
+
+        }
+
+        void mostrarCamion(){
+            cout<<"---DATOS DEL CAMION---"<<endl;
+            mostrarDatos();
+            cout<<"Carga actual: "<<carga<<" kg"<<endl;
+            cout<<"--------------------------"<<endl;
+        }
+        void cambiarCarga(double nuevaCarga){
+            if(nuevaCarga >=0){
+                carga = nuevaCarga;           
+             }else{
+                cout<<"La carga no puede ser negativa "<<endl;
+
+             }
+
+        }
+
+};
