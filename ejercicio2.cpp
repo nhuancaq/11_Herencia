@@ -62,6 +62,31 @@ class Rectangulo: public Figura {
         }
 };
 
+class Triangulo : public Figura{
+
+    private:
+        double base;
+        double altura;
+        string tipo;
+    public:
+        Triangulo(string col, double b, double h, string t)
+        : Figura(col), base(b), altura(h), tipo(t) {
+
+        }
+        double calcularArea(){
+            return(base*altura) /2.0;
+        }
+        void mostrarDatos(){
+            cout<<"---TRIANGULO---"<<endl;
+            cout<<"Color: "<<color<<endl;
+            cout<<"Tipo: "<<tipo<<endl;
+            cout<<"Base: "<<base<<endl;
+            cout<<"Area: "<<calcularArea()<<endl;
+        }
+
+};
+
+
  int main(){
 
     return 0;
