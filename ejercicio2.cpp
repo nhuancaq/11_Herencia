@@ -89,5 +89,17 @@ class Triangulo : public Figura{
 
  int main(){
 
+    Circulo circulo("azul", 5.0);
+    Rectangulo rectangulo("verde", 8.0, 4.5);
+    Triangulo triangulo("Amarillo", 6.0, 3.0, "Equilatero");
+
+    circulo.mostrarDatos();
+    cout<<endl;
+
+    rectangulo.mostrarDatos();
+    cout<<endl;
+
+    triangulo.mostrarDatos();
+
     return 0;
  }
