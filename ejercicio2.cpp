@@ -42,6 +42,26 @@ class Circulo: public Figura{
 
 };
 
+class Rectangulo: public Figura {
+    private:
+        double base;
+        doubke altura;
+    public:
+        Rectangulo(string col, double b, double h) : Figura(col), base(b),altura(h){
+
+        }
+        double calcularArea(){
+            return base * altura;
+        }
+        void mostrarDatos(){
+            cout<<"---RECTANGULO---"<<endl;
+            cout<<"Color: "<<color<<endl;
+            cout<<"Base: "<<base<<endl;
+            cout<<"Area: "<<calcularArea()<<endl;
+
+        }
+};
+
  int main(){
 
     return 0;
