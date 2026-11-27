@@ -89,3 +89,29 @@ class Camion : public vehiculo{
         }
 
 };
+
+int main (){
+    Automovil miAuto("ABC-123", "Rojo", "Toyota", 60.5, 4, 2);
+    Camion miCamion("XYZ-987", "Blanco", "Volvo", 45.0,5000.0);
+
+    cout<<"ESTADO INICIAL: "<<endl;
+    miAuto.mostrarAutomovil();
+    cout<<endl;
+    miCamion.mostrarCamion();
+    cout<<endl;
+
+    miAuto.cambiarVelocidad(95.0);
+    miAuto.subirPasajeros(2);
+    miAuto.bajarPasajeros(1);
+
+    miCamion.cambiarVelocidad(70.0);
+    miCamion.cambiarCarga(7500.5);
+
+    cout<<"ESTADO ACTUALIZADO: "<<endl;
+    miAuto.mostrarAutomovil();
+    cout<<endl;
+    miCamion.mostrarCamion();
+
+
+    return 0;
+}
