@@ -32,3 +32,33 @@ class vehiculo {
         }
 
 };
+class automovil: public vehiculo{
+    private:
+        int cantidadPuertas;
+        int cantidadPasajeros;
+    public:
+        automovil(string placa, string col, string mar, double vel, int puertas, int pasajeros)
+        : vehiculo(placa, col, mar, vel), cantidadPuertas(puertas), cantidadPasajeros(pasajeros){
+        }
+        void mostrarAutomovil(){
+            cout<<"Cantidad de puertas: "<<cantidadPuertas<<endl;
+            cout<<"Cantidad de pasajeros: "<<cantidadPasajeros<<endl;
+            cout<<" -------------------------"<<endl;
+        }
+
+        void subirPasajeros(int cantidad){
+            if(cantidad > 0){
+                cantidadPasajeros += cantidad;
+
+            }
+        }
+        void bajarPasajeros(int cantidad){
+            if(cantidad > 0 && cantidadPasajeros >= cantidad){
+                cantidadPasajeros -=cantidad;
+
+            }else{
+                cout<<"No hay suficientes pasajeros para bajar "<<endl;
+
+            }
+        }
+};
